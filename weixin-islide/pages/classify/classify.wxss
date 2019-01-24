@@ -1,0 +1,171 @@
+/**index.wxss**/
+::-webkit-scrollbar{
+  width: 2rpx;
+}
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.containerTabs {
+  width: 100%;
+  height: 100%;
+}
+.container_box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+.nav {
+  height: 80rpx;
+  width: 90%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #fff;
+  font-size: 16px;
+  white-space: nowrap;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-item {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav-item.active {
+  color: #cc4b4a;
+  height: 96%;
+  border-bottom: 2px solid #cc4b4a;
+}
+
+.tab-box {
+  background: #f2f2f2;
+  padding-top: 200rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.tab-content {
+  overflow-y: scroll;
+}
+.box_list {
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20rpx 10rpx;
+}
+
+.box_list_imagelist {
+  padding: 10rpx;
+  background-color: #fff;
+    border-radius: 10rpx;
+}
+
+.box_list_image {
+    width: 100%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.box_list_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20rpx;
+  color: #999;
+}
+.box_list_imagebox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btndialog {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 10%;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selectdialog {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+}
+
+.selectContent {
+  padding: 20rpx;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100rpx;
+}
+.selsectbox{
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.selectBtn {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 20rpx;
+  font-size: 22rpx;
+  box-sizing: border-box;
+  color: #000;
+  background-color: #7C7B8B;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10rpx;
+}
+
+.activedialog {
+  background-color: #FEFEFE;
+}
+
+.dialogclose {
+  text-align: center;
+  padding:0 30rpx 30rpx 30rpx;
+  color: #cc4a4b;
+}
+.dialogcloseicon{
+  width: 42rpx;
+  height: 42rpx;
+}
+
+
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.weui-search-bar{
+  background-color: #F2F2F2;
+  border-bottom: none;
+
+}
+.weui-search-bar__input{
+  height: 32px;
+  line-height: 32px;
+}

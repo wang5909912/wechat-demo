@@ -1,0 +1,47 @@
+<!--pages/Compilationsdetails/Compilationsdetails.wxml-->
+<view class="Compage">
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindblur="inputblur" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="navSearch">搜索</view>
+    </view>
+  </view>
+  <view class='detailsbox_title'>>>{{compilationtitle}}</view>
+</view>
+
+
+<view wx:if="{{details.length>0}}" class='detailsbox'>
+  <block wx:for="{{details}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+    <view class='box_list' data-id="{{item.id}}" bindtap='tapdetails'>
+      <view class='box_list_imagelist'>
+        <image src="{{item.image}}" class='box_list_image' />
+        <view class='box_list_content'>
+          <view>{{item.title}}</view>
+          <view class='box_list_imagebox'>
+            <text class='iconfont icon-yanjing' style="font-size:14px"></text>
+            <view>{{item.wxtype}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view wx:else class='detailsbox'>
+  <view class='emptydata'>
+    <image src="/pages/images/err.png" class='emptyimage'></image>
+    <view class='emptytext'>未搜索到结果，请尝试其他关键词</view>
+  </view>
+</view>

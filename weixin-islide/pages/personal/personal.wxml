@@ -1,0 +1,89 @@
+<view class="container">
+  <view class="userinfo">
+    <view class='userinfo_text'>
+      <image src="../images/bg.png" class='userinfo_image'></image>
+    </view>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='loginbtn'>
+      <image class="userinfo-avatar" src="../images/2.png" background-size="cover"></image>
+      <view class='userInfo-text'>点击登录</view>
+    </button>
+    <block wx:else>
+      <view class='userinfo_loginsuccess'>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+
+  <block wx:if="{{login}}">
+    <view class="page__bd">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">{{item}}</view>
+            </view>
+          </block>
+        </view>
+        <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <view class="product-list">
+              <view class="product-item" wx:for="{{productList}}" wx:for-item="product" wx:for-index="index" wx:key="index">
+                <view class='product_box'>
+                  <movable-area>
+                    <movable-view out-of-bounds="true" direction="horizontal" x="{{product.xmove}}" inertia="true" data-productIndex="{{index}}" bindchange="handleMovableChange">
+                      <view class="product-item-movable">
+                        <image class="product-delete-icon" src="{{product.image}}" data-id="{{product.id}}" data-productIndex="{{index}}" bindtap="showBtndetails"></image>
+                      </view>
+                    </movable-view>
+                  </movable-area>
+                  <view wx:if="{{!product.delect}}" class='delete-btn' data-productIndex="{{index}}" bindtap='readydeleteproduct'>删除</view>
+                  <view wx:else class="delete-btn" data-productIndex="{{index}}" bindtap="handleDeleteProduct">确认删除</view>
+                </view>
+
+                <view class="product-movable-item">
+                  <view class="product-movable-item-name">{{product.title}}</view>
+                  <view class='product_details_icon'>
+                    <text class='iconfont icon-yanjing' style="font-size:14px;color:#999;"></text>
+                    <view class="product-movable-item-code">{{product.wxtype}}</view>
+                  </view>
+                </view>
+              </view>
+
+            </view>
+          </view>
+
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <view class="product-list">
+              <view class="product-item" wx:for="{{gainHistory}}" wx:for-item="gain" wx:for-index="index" wx:key="index">
+                <view class='product_box'>
+                  <movable-area>
+                    <movable-view out-of-bounds="true" direction="horizontal" x="{{gain.xmove}}" inertia="true" data-gainIndex="{{index}}" bindchange="handleMovableChangegain">
+                      <view class="product-item-movable">
+                        <image class="product-delete-icon" src="{{gain.image}}" data-id="{{gain.id}}" data-gainIndex="{{index}}" bindtap="showBtndetails"></image>
+                      </view>
+                    </movable-view>
+                  </movable-area>
+                  <view wx:if="{{!gain.delect}}" class='delete-btn' data-gainIndex="{{index}}" bindtap='readydelete'>删除</view>
+                  <view wx:else class="delete-btn" data-gainIndex="{{index}}" bindtap="handleDeleteGain">确认删除</view>
+                </view>
+                <view class="product-movable-item">
+                  <view class="product-movable-item-name">{{gain.title}}</view>
+                  <view class='product_details_icon'>
+                    <text class='iconfont icon-yanjing' style="font-size:14px;color:#999;"></text>
+                    <view class="product-movable-item-code">{{gain.wxtype}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>
+  </block>
+</view>

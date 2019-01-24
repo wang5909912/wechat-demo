@@ -1,0 +1,52 @@
+<view>
+  <!-- <view class='details_top'> -->
+  <view class='details_imagebox'>
+    <image src='../images/3.png' class='details_image' />
+  </view>
+
+  <!-- </view> -->
+  <view class='details_bottom'>
+    <view class='details_contentbox'>
+      <view class='content_title'>
+        <view class='title_text'>模板标题</view>
+        <view class='details_title_iconbox'>
+          <!-- <image src="../images/icon/look1.png" class='details_title_icon'></image> -->
+          <text class='iconfont icon-yanjing' style="font-size:14px"></text>
+          <view>798</view>
+        </view>
+      </view>
+      <view class='content_num'>
+        <view>比列：16X9</view>
+        <view class='num_vertical'>|</view>
+        <view>页数：xxx</view>
+      </view>
+      <view>标签：2019、报告、总结、汽车、房子、图表、数据</view>
+    </view>
+    <block wx:for="{{images}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+      <view class='bottom_list'>
+        <image src="{{item}}" class='bottom_list_image' />
+      </view>
+    </block>
+  </view>
+  <view class='details_footer'>
+    <button class='footer_share' data-id="{{id}}" open-type='share'>
+      <text class='iconfont icon-fenxiang-m' style="font-size:20px"></text>
+    </button>
+    <button wx:if="{{gainbtn}}" class='footer_success' bindtap="openConfirm">获取模板</button>
+    <button wx:else class='footer_success' bindgetuserinfo="getUserInfo" open-type='getUserInfo'>获取模板</button>
+  </view>
+
+  <view class='details_modalbox' style="display:{{showdialog}}">
+    <view class='detailsmodal'>
+      <icon type="cancel" size="23" class='modal_remove' bindtap='closemodal'></icon>
+      <view class='modal_title'>请输入邮件地址</view>
+      <form bindsubmit="modalSubmit">
+        <view class='modal_inputbox'>
+          <input placeholder='请输入邮件地址' class='modal_input' name="email" />
+        </view>
+        <button class='modal_successbtn' form-type='submit'>确定</button>
+      </form>
+    </view>
+  </view>
+
+</view>

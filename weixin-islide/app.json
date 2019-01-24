@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/personal/personal",
+    "pages/Compilationsdetails/Compilationsdetails",
+    "pages/details/details",
+    "pages/success/success",
+    "pages/fail/fail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cc4a4b",
+    "navigationBarTitleText": "iSlide PPT模板",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#CC4A4B",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/icon/ca1_on.png",
+        "pagePath": "pages/index/index",
+        "text": "精选",
+        "iconPath": "pages/images/icon/ca1.png"
+      },
+      {
+        "selectedIconPath": "pages/images/icon/ca_on.png",
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "pages/images/icon/ca.png"
+      },
+      {
+        "selectedIconPath": "pages/images/icon/ueser_on.png",
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "pages/images/icon/ueser.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

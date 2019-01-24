@@ -1,0 +1,96 @@
+page {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.Compage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.detailsbox_title {
+  background-color: #f2f2f2;
+  padding: 10rpx 30rpx;
+  font-weight: 700;
+  font-size: 30rpx;
+}
+.box_list_imagebox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailsbox {
+  padding: 0 20rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  margin-top: 150rpx;
+}
+
+.box_list {
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20rpx 10rpx;
+}
+
+.box_list_imagelist {
+  padding: 10rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.box_list_image {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.box_list_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20rpx;
+  color: #999;
+}
+
+.searchbar-result {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.searchbar-result:before {
+  display: none;
+}
+
+.weui-cell {
+  padding: 12px 15px 12px 35px;
+}
+
+.weui-search-bar {
+  background-color: #f2f2f2;
+  border-bottom: none;
+}
+.weui-search-bar__input{
+  height: 32px;
+  line-height: 32px;
+}
+
+
+
+.emptydata{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 250rpx;
+}
+.emptyimage{
+  width: 300rpx;
+  height: 400rpx;
+}
+.emptytext{
+  font-size: 24rpx;
+}

@@ -1,0 +1,217 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.userinfo {
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.userinfo_text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 98;
+}
+.userinfo_loginsuccess{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 100;
+}
+.userinfo_image{
+  width:375px;
+  height: 175px; 
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userInfo-text {
+  font-size: 26rpx;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.loginbtn {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 99;
+}
+
+.loginbtn::after {
+  border: none;
+}
+
+.weui-bar__item_on {
+  color: #cc4a4b !important;
+  border-bottom: 2px solid #cc4a4b;
+  font-weight: 700;
+}
+
+.bottom_list {
+  box-sizing: border-box;
+  width: 100%;
+  /* height: 400rpx; */
+  padding: 20rpx;
+}
+
+.bottom_list_image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.bottom_list_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.weui-navbar {
+  border: none;
+  position: relative;
+}
+
+.weui-tab__panel {
+  /* margin-top: 52px; */
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 30rpx 30rpx 30rpx;
+  background-color: #f2f2f2;
+}
+
+.product-list .product-item {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 999;
+  margin-top: 50rpx;
+  border-radius: 10rpx;
+}
+
+.product-list .product-item movable-area {
+  height: 400rpx;
+  width: calc(100vw - 200rpx);
+}
+
+.product-list .product-item movable-view {
+  height: 400rpx;
+  width: 92vw;
+  background: #fff;
+  z-index: 999;
+  border-radius: 10rpx;
+}
+.product_box{
+  position: relative;
+}
+.product-list .product-item .delete-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2rpx;
+  width: 140rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 400rpx;
+  z-index: 1;
+  background: #cc4a4b;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.product-list .product-item-movable {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15rpx;
+  border-radius: 10rpx;
+}
+
+.product-list .product-item-movable .product-delete-icon {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 385rpx;
+  border-radius: 10rpx;
+}
+
+.product-movable-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 26rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.product-movable-item-name {
+  font-family: PingFangSC-Regular;
+  color: #969aa3;
+}
+.product_details_icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-movable-item-code {
+  font-family: PingFangSC-Regular;
+  color: #969aa3;
+}
+
+.product-movable-item-amount {
+  flex: 0 0 auto;
+  padding-right: 80rpx;
+  position: relative;
+}
+
+.product-movable-item-amount input {
+  padding: 10rpx;
+  opacity: 0.8;
+  background: #fff;
+  width: 160rpx;
+  border: 2rpx solid #e0e1e3;
+  font-family: PingFangSC-Semibold;
+  font-size: 28rpx;
+  color: #383a3d;
+  line-height: 60rpx;
+}
+
+.product-movable-item-amount text {
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  font-family: PingFangSC-Semibold;
+  font-size: 28rpx;
+  color: #383a3d;
+  line-height: 60rpx;
+}
